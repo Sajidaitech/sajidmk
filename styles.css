@@ -16,19 +16,22 @@ header {
 }
 
 .logo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes the logo round */
-    overflow: hidden; /* Ensures the logo stays inside the circle */
-    margin-right: 15px; /* Adds space between the logo and the name */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    display: flex; /* Ensure proper alignment */
+    align-items: center;
+    justify-content: center;
 }
 
 .logo img {
-    width: 100px%;
-    height: 100px;
-    object-fit: cover; /* Ensures the image covers the entire circular area */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Ensures the image itself remains circular */
 }
-
 h1 {
     flex-grow: 1;
     margin: 0;
