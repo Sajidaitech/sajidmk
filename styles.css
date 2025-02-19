@@ -1,18 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background for the body */
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Soft blue-gray gradient background */
+    color: #333333;
+    line-height: 1.6;
 }
 
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align the content to the left */
-    background-color: #333333; /* Dark gray background for header */
-    color: #ffffff; /* White text */
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark blue gradient for header */
+    color: #ffffff;
     padding: 1.5rem;
     text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -21,21 +24,25 @@ header {
     border-radius: 50%;
     overflow: hidden;
     margin-right: 15px;
-    display: flex; /* Ensure proper alignment */
+    display: flex;
     align-items: center;
     justify-content: center;
+    border: 3px solid #ffffff; /* White border for the logo */
 }
 
 .logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%; /* Ensures the image itself remains circular */
+    border-radius: 50%;
 }
 
 h1 {
     flex-grow: 1;
     margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -51,13 +58,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #cccccc; /* Light gray color for links */
+    color: #cccccc;
     text-decoration: none;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffffff; /* White on hover */
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 section {
@@ -66,40 +75,68 @@ section {
     margin: 20px auto;
     max-width: 90%;
     border-radius: 12px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Alternate section background colors */
+section.alt {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Light gray gradient for alternate sections */
+}
+
+section.dark {
+    background: linear-gradient(135deg, #34495e, #2c3e50); /* Dark blue gradient for dark sections */
+    color: #ffffff;
+}
+
+section.dark h2 {
+    color: #ffffff;
+}
+
+section.dark p {
+    color: #e0e0e0;
 }
 
 button {
     display: block;
     margin: 10px 0;
-    padding: 10px;
-    background: #333333; /* Dark gray button background */
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Blue gradient button */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background: #555555; /* Medium gray on hover */
+    background: linear-gradient(135deg, #2980b9, #3498db); /* Darker blue gradient on hover */
+    transform: scale(1.05);
 }
 
 .contact-form {
-    border: 1px solid #444444; /* Dark gray border */
+    border: 1px solid #444444;
     border-radius: 12px;
     padding: 2rem;
-    background-color: #333333; /* Dark gray background for the form */
+    background: linear-gradient(135deg, #34495e, #2c3e50); /* Dark blue gradient for form */
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form h2 {
-    color: #cccccc; /* Light gray header color */
+    color: #ffffff;
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    font-weight: 600;
 }
 
 .contact-form .form-group {
@@ -107,7 +144,7 @@ button:hover {
 }
 
 .contact-form .form-group label {
-    color: #cccccc; /* Light gray color for labels */
+    color: #cccccc;
     font-size: 1rem;
     display: block;
     margin-bottom: 0.5rem;
@@ -116,10 +153,16 @@ button:hover {
 .contact-form .form-group input {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #444444; /* Dark gray border */
+    border: 1px solid #444444;
     border-radius: 4px;
-    background-color: #222222; /* Very dark gray background for input fields */
-    color: #cccccc; /* Light text inside fields */
+    background-color: #222222;
+    color: #cccccc;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .form-group input:focus {
+    border-color: #ffffff;
+    outline: none;
 }
 
 .contact-form .form-group.social-media {
@@ -133,18 +176,20 @@ button:hover {
 }
 
 .contact-form .form-group .icons a {
-    color: #cccccc; /* Light gray color for icons */
+    color: #cccccc;
     font-size: 1.5rem;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form .form-group .icons a:hover {
-    color: #ffffff; /* White color on hover */
+    color: #ffffff;
+    transform: scale(1.2);
 }
 
 .contact-form button {
-    background-color: #555555; /* Medium gray color for the submit button */
-    color: #333333; /* Dark gray background color for the button text */
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Blue gradient for submit button */
+    color: white;
     border: none;
     padding: 1rem;
     border-radius: 6px;
@@ -152,18 +197,22 @@ button:hover {
     font-size: 1.2rem;
     cursor: pointer;
     margin-top: 1.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
-    background-color: #444444; /* Slightly darker gray when hovered */
+    background: linear-gradient(135deg, #2980b9, #3498db); /* Darker blue gradient on hover */
+    transform: scale(1.05);
 }
 
 #gallery {
     padding: 20px;
-    background-color: #ffffff; /* White background for gallery */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Light gray gradient for gallery */
     margin: 20px auto;
     max-width: 90%;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-container {
@@ -174,10 +223,16 @@ button:hover {
 }
 
 .image-box {
-    background-color: #e0e0e0; /* Light gray for image boxes */
+    background-color: #ffffff;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .image-box img {
@@ -187,12 +242,12 @@ button:hover {
 }
 
 .image-box p {
-    color: #333333; /* Dark gray text for image descriptions */
+    color: #333333;
     font-size: 1rem;
     margin-top: 10px;
 }
 
-/* Meeting Input Styles */
+/* Responsive Design */
 @media (max-width: 600px) {
     .meeting-input {
         display: flex;
@@ -212,20 +267,21 @@ button:hover {
     .meeting-input input, 
     .meeting-input select, 
     .meeting-input button {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%;
         padding: 10px;
         font-size: 1rem;
         margin-bottom: 10px;
     }
 
     .meeting-input button {
-        background-color: #333333;
+        background: linear-gradient(135deg, #3498db, #2980b9);
         color: white;
         border-radius: 5px;
         cursor: pointer;
+        transition: background 0.3s ease;
     }
 
     .meeting-input button:hover {
-        background-color: #555555;
+        background: linear-gradient(135deg, #2980b9, #3498db);
     }
 }
