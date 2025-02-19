@@ -28,23 +28,23 @@ function addImage() {
     imageInput.click();
 }
 function addMeeting() {
-    // Get the input values for date and time
     const date = document.getElementById("meeting-date").value;
-    const time = document.getElementById("meeting-time").value;
+    let time = document.getElementById("meeting-time").value;
+    const ampm = document.getElementById("meeting-ampm").value;
 
-    // Check if both date and time are provided
-    if (date && time) {
-        // Create a new list item for the meeting
-        const li = document.createElement("li");
-        li.textContent = `Meeting on ${date} at ${time}`;
+    if (time) {
+        let [hours, minutes] = time.split(":");
+        hours = parseInt(hours);
 
-        // Append the list item to the meeting log
-        document.getElementById("meeting-log").appendChild(li);
+        // Convert to 12-hour format
+        if (ampm === "PM" && hours < 12) {
+            hours += 12;
+        } else if (ampm === "AM" && hours === 12) {
+            hours = 0;
+        }
 
-        // Optionally, clear the inputs after adding the meeting
-        document.getElementById("meeting-date").value = "";
-        document.getElementById("meeting-time").value = "";
-    } else {
-        alert("Please provide both date and time for the meeting.");
+        time = `${String(hours).padStart(2, "0")}:${minutes}`;
     }
+
+    alert(`Meeting Scheduled on ${date} at ${time} ${ampm}`);
 }
