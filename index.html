@@ -9,9 +9,10 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+
     <header>
         <div class="logo">
-            <img src="photo.jpeg" alt="Logo" />
+            <img src="photo.jpeg" alt="Logo">
         </div>
         <h1>Sajid Mehmood</h1>
         <nav>
@@ -25,125 +26,117 @@
             </ul>
         </nav>
     </header>
-    
-    
+
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a final year student studying IT (Information Technology) at Middlesex University. I am expected to graduate in April 2025.</p>
+        <p>I am a final-year student pursuing a degree in Information Technology (IT) at Middlesex University, 
+            expected to graduate in April 2025. My academic journey has equipped me with a strong foundation in IT, 
+            and I am passionate about leveraging technology to address real-world challenges. My final-year project focuses on virtual classroom, 
+            a topic that aligns with global efforts to revolutionize education by making it more accessible, inclusive, and technologically advanced. 
+            By integrating AI and innovative features, the project 
+            aims to enhance the learning experience while promoting sustainability in education through reduced reliance on physical resources.</p>
     </section>
-    
+
     <section id="blog">
         <h2>Weekly Blog Posts</h2>
-        <p>The purpose of this blog is to document the proposal and structure the final year project idea.</p>
+        <p>This section will be updated weekly with progress reports, reflections, and challenges encountered during the project.
+             It will also include insights gained from research and supervisor meetings.</p>
     </section>
-    
+
     <section id="meetings">
         <h2>Supervisor Meeting Log</h2>
         
-        <!-- Input fields for date and time -->
         <div class="meeting-input">
             <label for="meeting-date">Meeting Date:</label>
-            <input type="date" id="meeting-date" required />
-            
+            <input type="date" id="meeting-date" required>
+            <br>
             <label for="meeting-time">Meeting Time:</label>
-            <input type="time" id="meeting-time" required />
+            <div class="time-container">
+                <input type="time" id="meeting-time" required>
+                <select id="meeting-ampm">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
             
             <button onclick="addMeeting()">Add Meeting</button>
         </div>
-    
-        <!-- Display added meetings -->
+
         <ul id="meeting-log"></ul>
     </section>
-    
+
     <section id="gallery">
         <h2>Gallery</h2>
-        <p>A space for project-related visuals or images.</p>
-        
-        <!-- Gallery Container -->
         <div class="gallery-container">
             <div class="image-box">
-                <img src="image1.jpg" alt="Project Image 1" />
+                <img src="image1.jpg" alt="Project Image 1">
                 <p>Image Description 1</p>
             </div>
             <div class="image-box">
-                <img src="image2.jpg" alt="Project Image 2" />
+                <img src="image2.jpg" alt="Project Image 2">
                 <p>Image Description 2</p>
             </div>
             <div class="image-box">
-                <img src="image3.jpg" alt="Project Image 3" />
+                <img src="image3.jpg" alt="Project Image 3">
                 <p>Image Description 3</p>
             </div>
-            <!-- Add more image boxes as needed -->
         </div>
     </section>
-    
-    
+
     <section id="project">
-        <h2>Project Title: Sustainable Transport</h2>
+        <h2>Project Title:Revolutionizing Online Education</h2>
         <h3>Problem Statement:</h3>
-        <p>Cars running on petrol and gas contribute to greenhouse gas emissions, damaging the environment and affecting people's health.</p>
-        <p>The demand for hybrid and fully electric cars has increased as they offer lower carbon emissions, sustainability, and affordability.</p>
-        
+        <p>High Licensing Costs: Many virtual classroom solutions 
+            require expensive licenses, making them inaccessible to smaller institutions and individual educators.</p>
+        <p>Lack of Personalization: Traditional online learning platforms often fail to provide personalized support,
+             leading to a one-size-fits-all approach that does not cater to individual learning needs.</p>
+        <p>Limited Collaboration Tools: Many platforms lack seamless integration of real-time collaboration
+             tools, hindering effective communication and interaction between educators and students.</p>
+        <p>Sustainability Challenges: Most educational platforms rely on subscription fees, which can
+             be prohibitive for some users, limiting their accessibility and long-term sustainability. </p>
+
+
         <h3>Objectives:</h3>
         <ul>
-            <li> 1     </li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            
+            <li>To design and implement a web-based virtual classroom system with unlimited session capability.</li>
+            <li>To integrate AI-powered features for personalized learning assistance and student support.</li>
+            <li>To develop a donation-based payment system to ensure platform sustainability.</li>
+            <li>To create an intuitive user interface for both educators and students.</li>
+            <li>To implement real-time collaboration tools and interactive learning features.</li>
+            <li>To ensure the platform is accessible to users with varying levels of technical expertise.</li>
+            <li>To provide automated content recommendations based on individual learning patterns.</li>
+            <li>To incorporate intelligent tutoring systems for real-time feedback and guidance.</li>
+            <li>To evaluate the effectiveness of the platform through user testing and feedback.</li>
+            <li>To contribute to the broader goal of making quality education accessible to all.</li>
         </ul>
-        
-        <h3>Proposed Approach:</h3>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            
-        </ul>
-        
-        <h3>Expected Outcomes:</h3>
-        <p>...</p>
     </section>
 
     <section id="contact-form">
-    <div class="contact-form">
-        <h2>Contact Me</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" value="Sajid Mehmood" readonly />
-            </div>
-        
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="Sajid.teech@gmail.com" readonly />
-            </div>
-        
-            <div class="form-group">
-                <label for="mobile">Mobile Number</label>
-                <input type="tel" id="mobile" name="mobile" value="+971 582424005" readonly />
-            </div>
-        
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" value="KSK Homes Student Residence and Hotel" readonly />
-            </div>
-        
-        
-            
-            <div class="form-group social-media">
-                <label>Connect with Me</label>
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/sajid-m-1b3954333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/s.teeeech?igsh=MWcwbHpqZjd3a2lvYQ%3D%3D&utm_source=qr" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" value="Sajid Mehmood" readonly>
                 </div>
-            </div>
-            
-        </form>
-    </div>
-</section>    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="Sajid.teech@gmail.com" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="Mobile Number">Mobile Number</label>
+                    <input type="email" id="Mobile Number" value="+971 0582424007" readonly>
+                </div>
+                <div class="form-group social-media">
+                    <label>Connect with Me</label>
+                    <div class="icons">
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
 </body>
 </html>
