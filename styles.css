@@ -32,6 +32,7 @@ header {
     object-fit: cover;
     border-radius: 50%; /* Ensures the image itself remains circular */
 }
+
 h1 {
     flex-grow: 1;
     margin: 0;
@@ -189,4 +190,42 @@ button:hover {
     color: #333333; /* Dark gray text for image descriptions */
     font-size: 1rem;
     margin-top: 10px;
+}
+
+/* Meeting Input Styles */
+@media (max-width: 600px) {
+    .meeting-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .meeting-input label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .meeting-input input, 
+    .meeting-input select, 
+    .meeting-input button {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .meeting-input button {
+        background-color: #333333;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .meeting-input button:hover {
+        background-color: #555555;
+    }
 }
