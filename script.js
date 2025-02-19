@@ -31,20 +31,23 @@ function addMeeting() {
     const date = document.getElementById("meeting-date").value;
     let time = document.getElementById("meeting-time").value;
     const ampm = document.getElementById("meeting-ampm").value;
+    const log = document.getElementById("meeting-log");
 
-    if (time) {
+    if (date && time) {
         let [hours, minutes] = time.split(":");
         hours = parseInt(hours);
 
-        // Convert to 12-hour format
         if (ampm === "PM" && hours < 12) {
             hours += 12;
         } else if (ampm === "AM" && hours === 12) {
             hours = 0;
         }
 
-        time = `${String(hours).padStart(2, "0")}:${minutes}`;
+        const formattedTime = `${String(hours).padStart(2, "0")}:${minutes} ${ampm}`;
+        const newEntry = document.createElement("li");
+        newEntry.textContent = `Meeting on ${date} at ${formattedTime}`;
+        log.appendChild(newEntry);
+    } else {
+        alert("Please enter both date and time.");
     }
-
-    alert(`Meeting Scheduled on ${date} at ${time} ${ampm}`);
 }
